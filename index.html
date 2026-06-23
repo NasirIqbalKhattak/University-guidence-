@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <a class="links brand-name"
+                 href="https://nasiriqbalkhattak.github.io/nasir-portfolio" target="_blank">
+                 Nasir Iqbal Khattak</a>
+            </div>
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a class="links" href="#comparison">Compare Universities</a>
+                <a class="links" href="#ranking">Top Universities</a>
+                <a class="links" href="#scholarship">Find Scholarship</a>
+                <a class="links" href="#AI-recommendation">AI Recommendation</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>Pakistan University Admission Portal</h1>
+            <p class="subtitle">Find admissions, approximate fees, rankings and scholarships.</p>
+        </div>
+        <button id="darkModeBtn">🌙 Dark Mode</button>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="reveal" style="padding:36px 0;">
+        <div class="page-inner about-grid">
+            <div class="page-intro">
+                <h2 style="margin-left: 7px;">Page Intro</h2>
+                <p style="margin-left: 7px;">This page is created to guide students while making decisions
+                    about choosing a university. Here you can find admission links,
+                    approximate fees, rankings, programs offered and scholarships
+                    available at the top universities of Pakistan.
+
+                </p>
+
+            </div>
+            <div class="card">
+                <h3>About developer</h3>
+                <ul style="margin:12px 0 0 0;padding:0;list-style:none;color:var(--muted);">
+                    <li>Portfolio:
+                        <a class="portfolio" style="text-decoration: none; font-size: large;"
+                            href="https://nasiriqbalkhattak.github.io/nasir-portfolio" target="_blank">Nasir Iqbal</a>
+                    </li>
+                    <li>Availability: Open to work</li>
+                    <li>Practice: 2+ years</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- University Comparison -->
+
+    <section id="comparison" class="container">
+
+        <h2>University Comparison</h2>
+
+        <select id="uni1">
+            <option>NUST</option>
+            <option>FAST</option>
+            <option>COMSATS</option>
+            <option>GIKI</option>
+            <option>AIR</option>
+        </select>
+
+        <select id="uni2">
+            <option>NUST</option>
+            <option>FAST</option>
+            <option>COMSATS</option>
+            <option>GIKI</option>
+            <option>AIR</option>
+        </select>
+
+        <button onclick="compareUniversities()">
+            Compare
+        </button>
+
+        <div id="comparisonResult"></div>
+
+    </section>
+
+
+    <!-- Preparation -->
+
+    <section class="container">
+
+        <h2>NET / ECAT / NTS Preparation</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>NET</h3>
+                <p>Mathematics, Physics, English.</p>
+            </div>
+
+            <div class="card">
+                <h3>ECAT</h3>
+                <p>Physics, Chemistry, Mathematics and English.</p>
+            </div>
+
+            <div class="card">
+                <h3>NTS</h3>
+                <p>Analytical, Verbal and Quantitative Preparation.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Scholarship Finder -->
+
+    <section id="scholarship" class="container">
+
+        <h2>Scholarship Finder</h2>
+
+        <select id="income">
+
+            <option value="low">Low Income</option>
+            <option value="medium">Medium Income</option>
+            <option value="high">High Income</option>
+
+        </select>
+
+        <button onclick="findScholarship()">
+            Find Scholarship
+        </button>
+
+        <div id="scholarshipResult"></div>
+
+    </section>
+
+    <!-- AI Recommendation -->
+
+    <section id="AI-recommendation" class="container">
+
+        <h2>AI University Recommendation</h2>
+
+        <select id="interest">
+
+            <option>BS Software engineering, AI, Computer Science, Data Science or Computer engineering</option>
+            <option>Cyber Security</option>
+            <option>Electrical Engineering, Civil Engineering or other Engineering programs</option>
+            <option>Buisness studies</option>
+            <option>Social Sciences</option>
+
+        </select>
+
+        <button onclick="recommend()">
+            Recommend University
+        </button>
+
+        <div id="recommendation"></div>
+
+    </section>
+
+    <!-- Top Ranking Institutes -->
+    <section id="ranking" class="container ranking-section">
+        <h2>🎓 Top Ranking Institutes</h2>
+        <div class="ranking-sections">
+            <div class="ranking-card engineering">
+                <div class="card-icon">⚙️</div>
+                <h3>Engineering</h3>
+                <ul class="uni-list">
+                    <li><strong>NUST</strong> - Top 1 Ranking</li>
+                    <li><strong>GIKI</strong> - Top 5 Ranking</li>
+                    <li><strong>UET Lahore</strong> - Premier Institute</li>
+                </ul>
+                <p class="small-text">FSc (Pre-Engineering) with 60%+ marks required</p>
+            </div>
+            <div class="ranking-card computing">
+                <div class="card-icon">💻</div>
+                <h3>Computing</h3>
+                <ul class="uni-list">
+                    <li><strong>FAST NUCES</strong> - Top 1 Ranking</li>
+                    <li><strong>COMSATS</strong> - Top 3 Ranking</li>
+                    <li><strong>NUST</strong> - Top 1 Ranking</li>
+                </ul>
+                <p class="small-text">Intermediate with Math, 50%+ marks required</p>
+            </div>
+            <div class="ranking-card social">
+                <div class="card-icon">📚</div>
+                <h3>Social Sciences</h3>
+                <ul class="uni-list">
+                    <li><strong>QAU</strong> - Islamabad</li>
+                    <li><strong>Punjab University</strong> - Lahore</li>
+                    <li><strong>LUMS</strong> - Premium Institute</li>
+                </ul>
+                <p class="small-text">Intermediate with 45%+ marks, entry test required</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
