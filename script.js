@@ -87,7 +87,7 @@ document
 <td>${universities[u1].field}</td>
 <td>${universities[u2].field}</td>
 </tr>
-<tr>
+
 
 
 </table>
