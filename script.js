@@ -17,34 +17,34 @@ NUST:{
 fee:"200,000+/Semester",
 ranking:"Top 1",
 field:"Engineering & Computing",
-addmission_deadline:"closed"
+
 },
 
 FAST:{
 fee:"200,000+/Semester",
 ranking:"Top 1",
 field:"Computing",
-addmission_deadline:""
+
 },
 
 COMSATS:{
 fee:"120,000+/Semester",
 ranking:"Top 3",
 field:"Computing",
-addmission_deadline:"2/july/2026"
+
 },
 
 GIKI:{
 fee:"250,000+/Semester",
 ranking:"Top 5",
 field:"Engineering",
-addmission_deadline:""
+
 },
 AIR:{
 fee:"150,000+/Semester",
 ranking:"Top 4",
 field:"computing",
-addmission_deadline:""
+
 }
 
 };
@@ -88,10 +88,7 @@ document
 <td>${universities[u2].field}</td>
 </tr>
 <tr>
-<td>addmission_deadline</td>
-<td>${universities[u1].addmission_deadline}</td>
-<td>${universities[u2].addmission_deadline}</td>
-</tr>
+
 
 </table>
 `;
