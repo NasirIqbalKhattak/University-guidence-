@@ -192,3 +192,15 @@ if (menuToggle && navLinks) {
         navLinks.classList.toggle("show");
     });
 }
+
+// Carousel: auto slide every 3 seconds
+(function initCarousel(){
+    const slidesContainer = document.querySelector('.carousel .slides');
+    const slides = document.querySelectorAll('.carousel .slide');
+    if(!slidesContainer || slides.length === 0) return;
+    let index = 0;
+    setInterval(()=>{
+        index = (index + 1) % slides.length;
+        slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+})();
